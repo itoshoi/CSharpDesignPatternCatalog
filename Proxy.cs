@@ -2,12 +2,12 @@ namespace Proxy
 {
     public abstract class Subject
     {
-        public abstract void SomeFunction();
+        public abstract void Request();
     }
 
     public class RealSubject : Subject
     {
-        public override void SomeFunction()
+        public override void Request()
         {
         }
     }
@@ -16,10 +16,10 @@ namespace Proxy
     {
         RealSubject realSubject = null;
 
-        public override void SomeFunction()
+        public override void Request()
         {
             // you can manage how to access here
-            realSubject.SomeFunction();
+            realSubject.Request();
         }
     }
 }
